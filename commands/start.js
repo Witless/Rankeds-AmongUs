@@ -3,6 +3,7 @@ module.exports = {
     aliases: ["comenzar", "start"],
     run: async (client, message, args, db) => {
         if (!message.member.voice.channel) return message.channel.send("No estás en ningún canal de voz");
+        if (!message.member.voice.channel.name.includes("Rankeds")) return message.channel.send("El canal de voz debe de ser de rankeds.");
         if (message.member.voice.channel.members.size !== 10) return message.channel.send("Debe de haber 10 personas en el canal de voz para comenzar");
 
         await db.getMatch(message.member.voice.channelID)
