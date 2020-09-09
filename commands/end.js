@@ -52,7 +52,7 @@ Recordad, los colores de las votaciones no están vinculados con los colores en 
             return crewMatesColors.includes(`<:${reaction.emoji.name}:${reaction.emoji.id}>`) &&  message.member.voice.channel.members.has(user.id) && !user.bot && message.client.user.id !== user.id
         };
 
-        const collected = await msg.awaitReactions(filter, { time: 60000, maxEmojis: 8 })
+        const collected = await msg.awaitReactions(filter, { time: 60000 })
 
             .then((coll) => coll)
             .catch(() => false);
