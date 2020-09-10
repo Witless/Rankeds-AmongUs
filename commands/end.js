@@ -63,7 +63,7 @@ Recordad, los colores de las votaciones no están vinculados con los colores en 
 
         for (const reaction of collected.values()) {
 
-            if (reaction.count < Math.floor(message.member.voice.channel.members.size * 0.8) + 1) continue;
+            if (reaction.count < Math.floor(message.member.voice.channel.members.size * 0.6) + 1) continue;
 
 
 
